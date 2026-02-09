@@ -1,0 +1,121 @@
+* { box-sizing: border-box; }
+
+body {
+    margin: 0;
+    font-family: 'Quicksand', sans-serif;
+    background: linear-gradient(135deg, #fbc2eb, #a6c1ee);
+    min-height: 100vh;
+    color: #333;
+}
+
+body.night {
+    background: linear-gradient(135deg, #2c3e50, #4b79a1);
+    color: #eee;
+}
+
+.night-mode {
+    position: fixed;
+    top: 15px;
+    right: 15px;
+    padding: 8px 14px;
+    border-radius: 20px;
+    background: #333;
+    color: #fff;
+    cursor: pointer;
+    font-size: 14px;
+}
+
+header { text-align: center; padding: 40px 15px; color: #fff; }
+header h1 { margin-bottom: 10px; font-size: 32px; }
+header p { opacity: 0.9; }
+
+.games {
+    display: flex;
+    gap: 25px;
+    padding: 30px;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+
+.card {
+    background: #ffffff;
+    width: 260px;
+    padding: 22px;
+    border-radius: 20px;
+    text-align: center;
+    box-shadow: 0 10px 25px rgba(0,0,0,0.15);
+    transition: transform 0.3s, box-shadow 0.3s;
+}
+
+.card:hover { transform: translateY(-8px) rotate(-1deg); box-shadow: 0 15px 30px rgba(0,0,0,0.2); }
+
+button {
+    background: #ff8ccf;
+    color: white;
+    border: none;
+    padding: 12px 24px;
+    border-radius: 30px;
+    cursor: pointer;
+    font-size: 15px;
+    transition: 0.2s;
+}
+
+button:hover { background: #ff6fb8; transform: scale(1.05); }
+
+.game, .cards { text-align: center; padding: 30px; }
+
+.big { font-size: 18px; margin: 20px 10px; }
+
+.flip {
+    width: 120px;
+    height: 170px;
+    background: linear-gradient(135deg, #a18cd1, #fbc2eb);
+    color: white;
+    border-radius: 20px;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    font-weight: bold;
+    cursor: pointer;
+    margin: 10px;
+    transition: transform 0.3s, box-shadow 0.3s;
+}
+
+.flip:hover { transform: translateY(-8px) rotate(-1deg); box-shadow: 0 15px 30px rgba(0,0,0,0.2); }
+
+.choices { margin: 20px 0; display: flex; justify-content: center; gap: 20px; }
+
+.truth-btn {
+    background: #ff6b81;
+    color: white;
+    border: none;
+    padding: 14px 28px;
+    border-radius: 30px;
+    font-size: 16px;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+.truth-btn:hover { background: #ff4b60; transform: scale(1.05); }
+
+.action-btn {
+    background: #6c63ff;
+    color: white;
+    border: none;
+    padding: 14px 28px;
+    border-radius: 30px;
+    font-size: 16px;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+.action-btn:hover { background: #4b49d6; transform: scale(1.05); }
+
+.choices button { margin: 10px; }
+
+footer {
+background: sienna;
+padding: 3rem 0;
+margin-top: 2rem;
+text-align: center;
+}
