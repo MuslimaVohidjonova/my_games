@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="uz">
+<head>
+<meta charset="UTF-8">
+<title>Kim kim?</title>
+<link rel="stylesheet" href="style.css">
+<style>
+#question { transition: all 0.5s ease; font-size: 18px; padding: 20px; }
+.choices button { transition: transform 0.2s, background 0.3s; margin:5px; padding:10px;}
+.choices button:active { transform: scale(0.95); }
+button.big { margin-top:10px; padding:10px 15px;}
+</style>
+</head>
+<body>
+
+<header>
+<h1>🤔 Kim kim?</h1>
+<p>Keyingi savol tugmasini bosing va random savol chiqadi!</p>
+</header>
+
+<main class="game">
+    <div class="card" id="question">“Keyingi savol” tugmasini bosing!</div>
+
+    <div class="choices">
+        <button onclick="answer('Men')">Men</button>
+        <button onclick="answer('Aka-Uka')">Aka-Uka</button>
+    </div>
+
+    <button class="big" onclick="nextQuestion()">Keyingi savol</button>
+    <button class="big" onclick="location.href='index.html'">⬅ Orqaga</button>
+</main>
+
+<script>
+const questions = [
+"Kim ko’proq kuladi?",
+"Kim dangasa?",
+"Kim balandroq kuylaydi?",
+"Kim o’yinlarni yaxshiroq o’ynaydi?",
+"Kim shirinliklarni tezroq yeydi?",
+"Kim balandroq kuladi?",
+"Kim qiziq raqs qiladi?",
+"Kim tezroq o’yinchoqlarni yig’adi?",
+"Kim masalalarni yaxshiroq hal qiladi?",
+"Kim balandroq 'ura!' deb baqiradi?",
+"Kim ko’proq kulgili hazil qiladi?",
+"Kim eng qiziq yuz ifodasini qiladi?",
+"Kim eng tez sakraydi?",
+"Kim eng sevimli qo’shig’ini kuylaydi?",
+"Kim eng sevimli o’yinchoq bilan o’ynaydi?",
+"Kim eng yaxshi raqs qiladi?",
+"Kim eng qiziq ovoz chiqaradi?",
+"Kim eng ko’p tabassum qiladi?",
+"Kim eng kulgili tasvirni ko’rsatadi?",
+"Kim eng tez chizadi?",
+"Kim eng yaxshi latifa aytadi?",
+"Kim eng baland ovoz bilan gapiradi?",
+"Kim eng qiziqarli hikoya qiladi?",
+"Kim eng sevimli mashg’ulotni bajaradi?",
+"Kim eng qiziq harakatni qiladi?",
+"Kim eng ko’p kuladi va kuldiradi?",
+"Kim eng sevimli ovqatni taqlid qiladi?",
+"Kim eng tez qo’shiq kuylaydi?",
+"Kim eng qiziq raqs harakatini qiladi?",
+"Kim eng sevimli film qahramonini ko’rsatadi?",
+"Kim eng sevimli o’yinning g’olibi?",
+"Kim eng tez yig’adi?",
+"Kim eng sevimli shirinlikni yeydi?",
+"Kim eng kulgili hazil aytadi?",
+"Kim eng sevimli rangni tanlaydi?",
+"Kim eng qiziq hikoya qiladi?",
+"Kim eng tez yuguradi?",
+"Kim eng sevimli o’yinchoqni tanlaydi?",
+"Kim eng qiziqarli teatr sahnasini ko’rsatadi?",
+"Kim eng sevimli multfilmdan sahnani taqlid qiladi?",
+"Kim eng ko’p kuladi va quvnoq?",
+"Kim eng qiziqarli ovoz chiqaradi?",
+"Kim eng sevimli qo’shiqni kuylaydi?",
+"Kim eng qiziq yuz ifodasini qiladi?",
+"Kim eng tez mini raqs qiladi?",
+"Kim eng qiziqarli harakatni ko’rsatadi?",
+"Kim eng kulgili o’yin o’ynaydi?",
+"Kim eng sevimli mashg’ulotni bajargan?",
+"Kim eng qiziq hazil qiladi?",
+"Kim eng sevimli joyni tanlaydi?",
+"Kim eng qiziqarli hikoya aytadi?",
+"Kim eng sevimli hayvonni taqlid qiladi?",
+"Kim eng kulgili ovoz chiqaradi?",
+"Kim eng qiziq raqs harakatini qiladi?",
+"Kim eng sevimli o’quv mashg’ulotini tanlaydi?"
+];
+
+function nextQuestion(){
+    const randomIndex = Math.floor(Math.random()*questions.length);
+    const questionEl = document.getElementById("question");
+    questionEl.style.transform = "scale(1.1)";
+    setTimeout(()=>{questionEl.style.transform="scale(1)";},300);
+    questionEl.innerText = questions[randomIndex];
+}
+
+function answer(who){
+    alert("Siz tanladingiz: " + who + "!");
+}
+</script>
+
+</body>
+</html>
